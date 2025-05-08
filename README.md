@@ -41,3 +41,25 @@ Aplicación web desarrollada con la pila MERN (MongoDB, Express, React, Node.js)
 │ ├── pages/ # Vistas: Productos
 │ ├── App.js # Configuración de rutas
 │ └── styles.css # Estilos base
+
+
+---
+
+## ▶️ Cómo ejecutar localmente
+
+1. Clona el repositorio:
+```bash
+git clone https://github.com/jonnhY99/crud_mern_grupo13.git
+cd crud_mern_grupo13
+
+
+2. Instalar dependencias
+npm install
+npm start
+
+
+Contribuciones
+Proyecto realizado por el Grupo 13 como parte del Taller de Desarrollo Web.
+
+Contacto
+Para más información o consultas técnicas, puedes abrir un issue o enviar un correo a los desarrolladores del grupo.
