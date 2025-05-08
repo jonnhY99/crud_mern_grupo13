@@ -11,12 +11,12 @@ const LayoutFooter = () => {
               La solución inteligente para la gestión de inventarios en PYMES. Potenciamos tu negocio con tecnología de vanguardia.
             </p>
           </div>
-          <div>
+          <div id="contact">
             <h3 className="text-white text-sm font-semibold tracking-wider uppercase">Contacto</h3>
             <ul className="mt-4 space-y-2">
               <li><a href="mailto:info@retailai.com" className="text-gray-300 hover:text-white text-sm">info@retailai.com</a></li>
-              <li><a href="tel:+525555555555" className="text-gray-300 hover:text-white text-sm">+52 55 5555 5555</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white text-sm">Av. Reforma 123, CDMX</a></li>
+              <li><a href="tel:+525555555555" className="text-gray-300 hover:text-white text-sm">+56 9222 2222</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white text-sm">Av. Siempre viva #742, Springfield, Chile</a></li>
             </ul>
           </div>
           <div>
@@ -44,7 +44,7 @@ const LayoutFooter = () => {
           </div>
         </div>
         <div className="mt-8 border-t border-gray-800 pt-8 md:flex md:items-center md:justify-between">
-          <p className="text-gray-400 text-sm">© 2023 RetailAI. Todos los derechos reservados.</p>
+          <p className="text-gray-400 text-sm">© 2025 RetailAI. Todos los derechos reservados. GRUPO13 UNAB</p>
           <div className="mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-white text-sm mr-4">Términos</a>
             <a href="#" className="text-gray-400 hover:text-white text-sm mr-4">Privacidad</a>

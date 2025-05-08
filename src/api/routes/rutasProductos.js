@@ -1,34 +1,53 @@
-const express = require("express")
-const Producto = require("../models/producto")
+const router = require("express").Router();
+const Producto = require("../models/producto");
 
-const rutas = express.Router()
+// Obtener todos los productos
+router.get("/", async (req, res) => {
+  try {
+    const productos = await Producto.find();
+    res.json(productos);
+  } catch (error) {
+    res.status(500).json({ error: "Error al obtener los productos" });
+  }
+});
 
-rutas.get("/", async (req, res) => {
-  const productos = await Producto.find()
-  res.json(productos)
-})
+// Crear un producto nuevo
+router.post("/", async (req, res) => {
+  try {
+    const { nombre, precio, stock } = req.body;
+    const nuevoProducto = new Producto({ nombre, precio, stock });
+    await nuevoProducto.save();
+    console.log("✅ Producto guardado:", nuevoProducto);
+    res.status(201).json(nuevoProducto);
+  } catch (error) {
+    console.error("Error al crear producto:", error);
+    res.status(500).json({ error: "Error al crear el producto" });
+  }
+});
 
-rutas.get("/:id", async (req, res) => {
-  const producto = await Producto.findById(req.params.id)
-  res.json(producto)
-})
+// Actualizar un producto
+router.put("/:id", async (req, res) => {
+  try {
+    const { nombre, precio, stock } = req.body;
+    const productoActualizado = await Producto.findByIdAndUpdate(
+      req.params.id,
+      { nombre, precio, stock },
+      { new: true }
+    );
+    res.json(productoActualizado);
+  } catch (error) {
+    res.status(500).json({ error: "Error al actualizar el producto" });
+  }
+});
 
-rutas.post("/", async (req, res) => {
-  const { nombre, descripcion, sku, cantidad } = req.body
-  const producto = new Producto({ nombre, descripcion, sku, cantidad })
-  await producto.save()
-  res.json({status: "producto creado"})
-})
+// Eliminar un producto
+router.delete("/:id", async (req, res) => {
+  try {
+    await Producto.findByIdAndDelete(req.params.id);
+    res.json({ mensaje: "Producto eliminado correctamente" });
+  } catch (error) {
+    res.status(500).json({ error: "Error al eliminar el producto" });
+  }
+});
 
-rutas.put("/:id", async (req, res) => {
-  const { nombre, descripcion, sku, cantidad } = req.body
-  await Producto.findByIdAndUpdate(req.params.id, { nombre, descripcion, sku, cantidad })
-  res.json({status: "producto actualizado"})
-})
-
-rutas.delete("/:id", async (req, res) => {
-  await Producto.findByIdAndDelete(req.params.id)
-  res.json({status: "producto eliminado"})
-})
-
-module.exports = rutas
+module.exports = router;

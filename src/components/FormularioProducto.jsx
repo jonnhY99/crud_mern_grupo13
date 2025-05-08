@@ -9,7 +9,11 @@ const FormularioProducto = ({ onProductoCreado }) => {
   const manejarEnvio = async (e) => {
     e.preventDefault();
     try {
-      const nuevoProducto = { nombre, precio, stock };
+      const nuevoProducto = {
+        nombre,
+        precio: Number(precio),
+        stock: Number(stock),
+      };
       await axios.post("http://localhost:5000/api/productos", nuevoProducto);
       setNombre("");
       setPrecio("");

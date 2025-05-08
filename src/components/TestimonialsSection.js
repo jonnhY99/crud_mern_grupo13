@@ -5,20 +5,20 @@ const TestimonialsSection = () => {
     {
       id: 1,
       quote: "RetailAI ha transformado completamente nuestra gestión de inventarios. Ahora podemos predecir la demanda con un 95% de precisión.",
-      author: "María González",
-      role: "Dueña, Tienda de Ropa"
+      author: "Denisse Ponce",
+      role: "Directora, Cadena de Supermercados"
     },
     {
       id: 2,
       quote: "La implementación fue sencilla y los resultados inmediatos. Hemos reducido nuestro inventario muerto en un 40%.",
-      author: "Carlos Mendoza",
+      author: "Felipe Valledares",
       role: "Gerente, Ferretería Industrial"
     },
     {
       id: 3,
       quote: "Por fin una solución accesible para PYMES. La IA nos ha ayudado a optimizar nuestros pedidos y reducir costos.",
-      author: "Lucía Ramírez",
-      role: "Directora, Cadena de Farmacias"
+      author: "Oscar Bustamante",
+      role: "Director, Cadena de Farmacias"
     }
   ];
 

@@ -84,7 +84,9 @@ const Productos = () => {
           {productos.map((producto) => (
             <tr key={producto._id}>
               <td className="px-4 py-2 border">{producto.nombre}</td>
-              <td className="px-4 py-2 border">${producto.precio}</td>
+              <td className="px-4 py-2 border">
+  {typeof producto.precio === "number" ? `$${producto.precio.toFixed(0)}` : "N/A"}
+</td>
               <td className="px-4 py-2 border">{producto.stock}</td>
               <td className="px-4 py-2 border text-center space-x-2">
                 <button

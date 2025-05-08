@@ -5,7 +5,10 @@ import TestimonialsSection from './components/TestimonialsSection';
 import GallerySection from './components/GallerySection';
 import LayoutFooter from './components/LayoutFooter';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Productos from './pages/Productos'; // tu vista CRUD
+import Productos from './pages/Productos';
+import Nosotros from './pages/Nosotros';
+import Contacto from './pages/Contacto';
+
 
 function App() {
   return (
@@ -25,6 +28,8 @@ function App() {
               }
             />
             <Route path="/productos" element={<Productos />} />
+            <Route path="/nosotros" element={<Nosotros />} />
+            <Route path="/contacto" element={<Contacto />} />
           </Routes>
         </main>
         <LayoutFooter />

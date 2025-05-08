@@ -54,8 +54,12 @@ cd crud_mern_grupo13
 
 
 2. Instalar dependencias
+# 1 terminal frontend
 npm install
 npm start
+
+# 2 terminal backend
+npm run server
 
 
 Contribuciones

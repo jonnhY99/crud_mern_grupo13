@@ -8,7 +8,7 @@ const Alerta = ({ mensaje, tipo = "success" }) => {
   };
 
   return (
-    <div className={\`border px-4 py-3 rounded relative mb-4 \${colores[tipo]}\`} role="alert">
+    <div className={`border px-4 py-3 rounded relative mb-4 ${colores[tipo]}`} role="alert">
       <strong className="font-bold capitalize">{tipo}:</strong>
       <span className="block sm:inline ml-2">{mensaje}</span>
     </div>
