@@ -61,6 +61,9 @@ npm start
 # 2 terminal backend
 npm run server
 
+# 3 Conexion a base de datos mongoDB
+
+mongodb://127.0.0.1:27017/crudgrupo13"
 
 Contribuciones
 Proyecto realizado por el Grupo 13 como parte del Taller de Desarrollo Web.
