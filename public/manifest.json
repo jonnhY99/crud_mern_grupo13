@@ -18,12 +18,12 @@
       "type": "image/png"
     }
   ],
-  "screenshots": [
-    {
-      "src": "/screenshot1.png",
-      "sizes": "540x720",
-      "type": "image/png",
-      "form_factor": "wide"
-    }
-  ]
+"screenshots": [
+  {
+    "src": "/screenshot-1.png",
+    "sizes": "1280x720",
+    "type": "image/png",
+    "form_factor": "wide"
+  }
+]
 }
