@@ -2,6 +2,7 @@
 
 Aplicación web desarrollada con la pila MERN (MongoDB, Express, React, Node.js), orientada a la gestión de inventarios con funcionalidades completas de CRUD, diseño moderno y mejoras progresivas.
 
+Actualmente levantada en render con la siguiente URL https://retailai.onrender.com/
 ---
 
 ## 📦 Características del proyecto
@@ -52,18 +53,39 @@ Aplicación web desarrollada con la pila MERN (MongoDB, Express, React, Node.js)
 git clone https://github.com/jonnhY99/crud_mern_grupo13.git
 cd crud_mern_grupo13
 
+2. Modificacion de archivos
+En el archivo FormularioEditar.jsx
+  Debes cambiar las lineas que tengan https://retailai-backend.onrender.com/api/productos/ por la linea http://localhost:5000/api/productos/
+  Debes realizar lo mismo en el archivo FormularioProducto.jsx
 
-2. Instalar dependencias
+Reemplaza el codigo de db.js por el siguiente:
+const mongoose = require("mongoose");
+
+const uri = "mongodb://127.0.0.1:27017/crudgrupo13";
+
+mongoose.connect(uri)
+  .then(() => console.log("✅ Conexión a MongoDB exitosa"))
+  .catch(err => console.error(err));
+  
+module.exports = mongoose
+  
+module.exports = mongoose
+--GUARDA Y CIERRA EL ARCHIVO--
+
+MODIFICA EL ARCHIVO Productos.jsx
+Debes cambiar las lineas que tengan https://retailai-backend.onrender.com/api/productos/ por la linea http://localhost:5000/api/productos/
+
+GUARDA TUS NUEVOS ARCHIVOS Y LUEGO PASA AL PUNTO 3 PARA LA INSTALACION.
+
+3. Instalar dependencias
 # 1 terminal frontend
+cd cd crud_mern_grupo13
 npm install
 npm start
 
 # 2 terminal backend
+cd crud_mern_grupo13
 npm run server
-
-# 3 Conexion a base de datos mongoDB
-
-mongodb://127.0.0.1:27017/crudgrupo13"
 
 Contribuciones
 Proyecto realizado por el Grupo 13 como parte del Taller de Desarrollo Web.
