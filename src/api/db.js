@@ -1,9 +1,12 @@
 const mongoose = require("mongoose");
 
-const uri = "mongodb://127.0.0.1:27017/crudgrupo13";
+const uri = process.env.MONGO_URI;
 
-mongoose.connect(uri)
+mongoose.connect(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
   .then(() => console.log("✅ Conexión a MongoDB exitosa"))
-  .catch(err => console.error(err));
-  
-module.exports = mongoose
+  .catch(err => console.error("❌ Error al conectar a MongoDB:", err));
+
+module.exports = mongoose;
