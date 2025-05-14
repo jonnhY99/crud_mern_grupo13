@@ -14,7 +14,7 @@ const FormularioProducto = ({ onProductoCreado }) => {
         precio: Number(precio),
         stock: Number(stock),
       };
-      await axios.post("https://retailai.onrender.com/api/productos", nuevoProducto);
+      await axios.post("https://retailai-backend.onrender.com/api/productos", nuevoProducto);
       setNombre("");
       setPrecio("");
       setStock("");

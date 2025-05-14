@@ -18,7 +18,7 @@ const FormularioEditar = ({ producto, onCancel, onEditSuccess }) => {
     e.preventDefault();
     try {
       const actualizado = { nombre, precio, stock };
-      await axios.put(`https://retailai.onrender.com/api/productos/${producto._id}`, actualizado);
+      await axios.put(`https://retailai-backend.onrender.com/api/productos/${producto._id}`, actualizado);
       if (onEditSuccess) onEditSuccess();
     } catch (error) {
       console.error("Error al editar producto:", error);

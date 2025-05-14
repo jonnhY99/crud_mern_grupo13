@@ -12,7 +12,7 @@ const Productos = () => {
 
   const cargarProductos = () => {
     axios
-      .get("http://localhost:5000/api/productos")
+      .get("https://retailai-backend.onrender.com/api/productos")
       .then((res) => setProductos(res.data))
       .catch((err) => {
         console.error("Error al cargar productos:", err);
@@ -34,7 +34,7 @@ const Productos = () => {
   const eliminarProducto = (id) => {
     if (window.confirm("¿Estás seguro de eliminar este producto?")) {
       axios
-        .delete(`http://localhost:5000/api/productos/${id}`)
+        .delete(`https://retailai-backend.onrender.com/api/productos/${id}`)
         .then(() => {
           cargarProductos();
           mostrarMensaje("Producto eliminado correctamente.");
